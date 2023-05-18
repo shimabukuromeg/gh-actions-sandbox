@@ -1,0 +1,21 @@
+# .github/workflows/main.yml
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: |
+          echo "FROM alpine" > Dockerfile
+          echo "RUN echo 'hello'" >> Dockerfile
+          docker build -t hello .
