@@ -26,3 +26,5 @@ jobs:
           context: app
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+          build-args: |
+            AUTH_TOKEN="トークンだよ"
