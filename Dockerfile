@@ -1,5 +1,5 @@
 # ベースイメージを指定
-FROM debian:buster
+FROM node:18
 
 # 環境変数を設定
 ENV MY_VARIABLE="Hello, Docker!"
