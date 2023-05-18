@@ -6,6 +6,11 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
   trigger-build-workflow:
     uses: ./.github/workflows/build.yml
