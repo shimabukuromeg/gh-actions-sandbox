@@ -5,4 +5,5 @@ FROM node:18
 ENV MY_VARIABLE="Hello, Docker!"
 
 # Docker コンテナのデフォルトのコマンドを設定 (環境変数を出力)
-CMD echo $MY_VARIABLE
+RUN echo "デバッグする"
+RUN echo $MY_VARIABLE
