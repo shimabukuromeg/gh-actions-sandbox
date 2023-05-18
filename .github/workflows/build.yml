@@ -21,10 +21,6 @@ jobs:
         id: docker-build-app
         uses: docker/build-push-action@v4
         with:
-          context: "app"
+          context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
-          build-args: |
-            TOKEN="token"
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          tags: user/app:latest
