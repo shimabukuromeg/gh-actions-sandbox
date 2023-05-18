@@ -13,8 +13,7 @@ jobs:
         id: build
         uses: docker/build-push-action@v4
         with:
-          context: ./frontend
-          file: ./Dockerfile
+          context: frontend
           push: false
           tags: ${{ github.repository }}:latest
           build-args: |
