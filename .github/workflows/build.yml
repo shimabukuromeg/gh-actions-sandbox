@@ -24,5 +24,6 @@ jobs:
           context: app
           push: true
           tags: app:latest
+          provenance: false
           cache-from: type-gha
           cache-to: type=gha,mode=max
