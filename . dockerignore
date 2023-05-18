@@ -1,0 +1,6 @@
+.git/
+build/
+public/
+node_modules/
+.env
+.cache
