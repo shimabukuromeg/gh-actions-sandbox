@@ -27,5 +27,5 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
           build-args: |
-            AUTH_TOKEN=${{ github.sha }}
+            AUTH_TOKEN=${{ secrets.AUTH_TOKEN }}
             VERSION=${{ github.sha }}
